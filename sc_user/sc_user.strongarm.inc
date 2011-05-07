@@ -74,13 +74,12 @@ function sc_user_strongarm() {
   $strongarm->name = 'content_extra_weights_profile';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '-3',
-    'revision_information' => '1',
-    'author' => '0',
-    'options' => '2',
-    'comment_settings' => '4',
-    'menu' => '-4',
-    'path' => '3',
+    'revision_information' => '7',
+    'author' => '6',
+    'options' => '8',
+    'comment_settings' => '10',
+    'menu' => '5',
+    'path' => '9',
   );
 
   $export['content_extra_weights_profile'] = $strongarm;

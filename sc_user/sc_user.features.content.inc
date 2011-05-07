@@ -74,10 +74,72 @@ $display = $node_field_item[\'value\'];
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Age',
-      'weight' => '-1',
+      'weight' => '1',
       'description' => '',
       'type' => 'computed',
       'module' => 'computed_field',
+    ),
+  );
+
+  // Exported field: field_bio
+  $fields['profile-field_bio'] = array(
+    'field_name' => 'field_bio',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => '5',
+      'size' => 60,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_bio][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Bio',
+      'weight' => '-1',
+      'description' => '',
+      'type' => 'text_textarea',
+      'module' => 'text',
     ),
   );
 
@@ -145,17 +207,616 @@ $display = $node_field_item[\'value\'];
       'year_range' => '-100:+10',
       'label_position' => 'above',
       'label' => 'Birthday',
-      'weight' => '-2',
+      'weight' => 0,
       'description' => '',
       'type' => 'date_select',
       'module' => 'date',
     ),
   );
 
+  // Exported field: field_lang_fluent
+  $fields['profile-field_lang_fluent'] = array(
+    'field_name' => 'field_lang_fluent',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'Arabic
+Bengali
+Dutch
+English
+French
+Filipino
+German
+Hindi
+Italian
+Japanese
+Korean
+Mandarin Chinese
+Norwegian
+Pashto
+Persian
+Polish
+Portuguese
+Punjabi
+Romanian
+Russian
+Spanish
+Swedish
+Tamil
+Thai
+Turkish
+Ukrainian
+Vietnamese
+Other Language',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Fluent Languages',
+      'weight' => '3',
+      'description' => '',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
+    ),
+  );
+
+  // Exported field: field_lang_study
+  $fields['profile-field_lang_study'] = array(
+    'field_name' => 'field_lang_study',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'Arabic
+Bengali
+Dutch
+English
+French
+Filipino
+German
+Hindi
+Italian
+Japanese
+Korean
+Mandarin Chinese
+Norwegian
+Pashto
+Persian
+Polish
+Portuguese
+Punjabi
+Romanian
+Russian
+Spanish
+Swedish
+Tamil
+Thai
+Turkish
+Ukrainian
+Vietnamese
+Other Language',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Languages I am studying',
+      'weight' => '4',
+      'description' => '',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
+    ),
+  );
+
+  // Exported field: field_location
+  $fields['profile-field_location'] = array(
+    'field_name' => 'field_location',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_location][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Location',
+      'weight' => '-2',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_name
+  $fields['profile-field_name'] = array(
+    'field_name' => 'field_name',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_name][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Full Name',
+      'weight' => '-4',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_name_eng
+  $fields['profile-field_name_eng'] = array(
+    'field_name' => 'field_name_eng',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_name_eng][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'English Name',
+      'weight' => '-3',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_nationality
+  $fields['profile-field_nationality'] = array(
+    'field_name' => 'field_nationality',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'Afghan
+Afrikaner
+Albanian
+Algerian
+American
+Andorran
+Angolan
+Argentine
+Armenian
+Aromanian
+Aruban
+Australian
+Indigenous Australian
+Austrian
+Azeris
+Bahamian
+Bahrainis
+Balochi
+Bangladeshis
+Barbadian
+Belarusian
+Belgian
+Belizean
+Boer
+Bosnian
+Brazilian
+Breton
+British
+British Virgin Islander
+Bulgarians
+Burundian
+Cambodian
+Cameroonian
+Canadian
+Catalan
+Cape Verdean
+Chadian
+Chilean
+Chinese
+Colombian
+Comorian
+Congolese
+Croatian
+Cuban
+Cypriot
+Turkish Cypriot
+Czech
+Dane
+Dominican (Republic)
+Dominican (Commonwealth)
+Dutch
+East Timorese
+Ecuadorian
+Egyptian
+Emiratis
+English
+Eritrean
+Estonian
+Ethiopian
+Finn
+Finnish Swedish
+Fijian
+Filipino
+French citizen
+Georgian
+German
+Baltic German
+Ghanaian
+Gibraltar
+Greek
+Grenadian
+Guatemalan
+Guianese (French)
+Guinean
+Guinea-Bissau national
+Guyanese
+Haitian
+Honduran
+Hong Konger
+Hungarian
+Icelander
+Indian
+Indonesian
+Iranian (Persian)
+Iraqi
+Irish
+Israeli
+Italian
+Ivoirian
+Jamaican
+Japanese
+Jordanian
+Kazakh
+Kenyan
+Korean
+Kosovo Albanian
+Kuwaiti
+Lao
+Latvian
+Lebanese
+Liberian
+Libyan
+Liechtensteiner
+Lithuanian
+Luxembourger
+Macedonian
+Malawian
+Malaysian
+Maldivian
+Malian
+Maltese
+Manx
+Mauritian
+Mexican
+Moldovan
+Moroccan
+Mongolian
+Montenegrin
+Namibian
+Nepalese
+New Zealander (Kiwi)
+Nicaraguan
+Nigerien
+Nigerian
+Norwegian
+Pakistani
+Palauan
+Palestinian
+Panamanian
+Papua New Guineans
+Paraguayan
+Peruvian
+Pole
+Portuguese
+Puerto Rican
+Quebecer
+RÃ©unionnais
+Romanian
+Russian
+Baltic Russian
+Rwandan
+Salvadoran
+Saudi
+Scot
+Senegalese
+Serb
+Sicilian
+Sierra Leonean
+Singaporean
+Slovak
+Slovenes
+Somali
+South African
+Spanish
+Sri Lankan
+Sudanese
+Swede
+Swiss
+Syrian
+Taiwanese
+Tanzanian
+Thai
+Tibetan
+Tobagonian
+Trinidadian
+Turk
+Tuvaluan
+Ugandan
+Ukrainian
+Uruguayan
+Venezuelan
+Vietnamese
+Welsh
+Yemeni
+Zambian
+Zimbabwean',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Nationality',
+      'weight' => '2',
+      'description' => '',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Age');
+  t('Bio');
   t('Birthday');
+  t('English Name');
+  t('Fluent Languages');
+  t('Full Name');
+  t('Languages I am studying');
+  t('Location');
+  t('Nationality');
 
   return $fields;
 }
