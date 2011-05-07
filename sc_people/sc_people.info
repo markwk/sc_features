@@ -1,0 +1,8 @@
+core = "6.x"
+dependencies[] = "facebook_status"
+dependencies[] = "views"
+description = "List of people on site"
+features[views][] = "People"
+features[views_api][] = "api:2"
+name = "sc_people"
+package = "Features"

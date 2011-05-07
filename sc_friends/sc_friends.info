@@ -1,0 +1,6 @@
+core = "6.x"
+dependencies[] = "user_relationship_elaborations"
+dependencies[] = "user_relationships_api"
+description = "List of your friends"
+name = "sc_friends"
+package = "Features"

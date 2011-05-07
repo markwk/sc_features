@@ -1,0 +1,3 @@
+<?php
+
+include_once('sc_user.features.inc');

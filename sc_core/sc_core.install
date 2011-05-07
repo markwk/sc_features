@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implementation of hook_install().
+ */
+function sc_core_install() {
+  // Add timestamp index to comments table.
+  if (db_table_exists('comments')) {
+    db_query("ALTER TABLE {comments} ADD INDEX(timestamp)");
+  }
+  // Add type,nid index to node table. Allows for more efficient joins to
+  // og_ancestry when limiting a view by a certain node type.
+  if (db_table_exists('node')) {
+    db_query("ALTER TABLE {node} ADD KEY type_node (type, nid)");
+  }
+
+  // Insert WYSIWYG settings into its table.
+  $wysiwyg = array();
+  $wysiwyg[] = array(
+    'format' => 1,
+    'editor' => 'ckeditor',
+    'settings' => 'a:20:{s:7:"default";i:1;s:11:"user_choose";i:0;s:11:"show_toggle";i:1;s:5:"theme";s:8:"advanced";s:8:"language";s:2:"en";s:7:"buttons";a:1:{s:7:"default";a:12:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:6:"Strike";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:4:"Link";i:1;s:10:"Blockquote";i:1;s:6:"Source";i:1;s:6:"Format";i:1;s:5:"Table";i:1;s:6:"Smiley";i:1;s:12:"SpellChecker";i:1;}}s:11:"toolbar_loc";s:3:"top";s:13:"toolbar_align";s:4:"left";s:8:"path_loc";s:6:"bottom";s:8:"resizing";i:1;s:11:"verify_html";i:1;s:12:"preformatted";i:0;s:22:"convert_fonts_to_spans";i:1;s:17:"remove_linebreaks";i:1;s:23:"apply_source_formatting";i:0;s:27:"paste_auto_cleanup_on_paste";i:1;s:13:"block_formats";s:26:"p,address,pre,h2,h3,h4,div";s:11:"css_setting";s:4:"self";s:8:"css_path";s:37:"%b%t/typography.css, %b%t/wysiwyg.css";s:11:"css_classes";s:0:"";}',
+  );
+  $wysiwyg[] = array(
+    'format' => 2,
+    'editor' => 'ckeditor',
+    'settings' => 'a:20:{s:7:"default";i:1;s:11:"user_choose";i:0;s:11:"show_toggle";i:1;s:5:"theme";s:8:"advanced";s:8:"language";s:2:"en";s:7:"buttons";a:1:{s:7:"default";a:12:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:6:"Strike";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:4:"Link";i:1;s:10:"Blockquote";i:1;s:6:"Source";i:1;s:6:"Format";i:1;s:5:"Table";i:1;s:6:"Smiley";i:1;s:12:"SpellChecker";i:1;}}s:11:"toolbar_loc";s:3:"top";s:13:"toolbar_align";s:4:"left";s:8:"path_loc";s:6:"bottom";s:8:"resizing";i:1;s:11:"verify_html";i:1;s:12:"preformatted";i:0;s:22:"convert_fonts_to_spans";i:1;s:17:"remove_linebreaks";i:1;s:23:"apply_source_formatting";i:0;s:27:"paste_auto_cleanup_on_paste";i:1;s:13:"block_formats";s:26:"p,address,pre,h2,h3,h4,div";s:11:"css_setting";s:4:"self";s:8:"css_path";s:37:"%b%t/typography.css, %b%t/wysiwyg.css";s:11:"css_classes";s:0:"";}',
+  );
+ 
+  foreach ($wysiwyg as $editor) {
+    db_query("INSERT INTO {wysiwyg} (format, editor, settings) VALUES (%d, '%s', '%s')", $editor['format'], $editor['editor'], $editor['settings']);
+  }
+}
