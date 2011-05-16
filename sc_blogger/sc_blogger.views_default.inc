@@ -41,7 +41,7 @@ function sc_blogger_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 0,
+      'link_to_node' => 1,
       'exclude' => 0,
       'id' => 'title',
       'table' => 'node',
@@ -154,12 +154,12 @@ function sc_blogger_views_default_views() {
   ));
   $handler->override_option('arguments', array(
     'uid' => array(
-      'default_action' => 'ignore',
+      'default_action' => 'not found',
       'style_plugin' => 'default_summary',
       'style_options' => array(),
       'wildcard' => '',
       'wildcard_substitution' => '',
-      'title' => '',
+      'title' => 'Your Blog Posts',
       'breadcrumb' => '',
       'default_argument_type' => 'fixed',
       'default_argument' => '',
@@ -207,8 +207,11 @@ function sc_blogger_views_default_views() {
       'validate_argument_user_flag_name' => '*relationship*',
       'validate_argument_user_flag_test' => 'flaggable',
       'validate_argument_user_flag_id_type' => 'id',
-      'validate_argument_php' => 'global $user
+      'validate_argument_php' => 'global $user;
 return $argument[0] == $user->uid;',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
   ));
   $handler->override_option('filters', array(
@@ -228,11 +231,6 @@ return $argument[0] == $user->uid;',
       'field' => 'type',
       'relationship' => 'none',
     ),
-    'status' => array(
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -243,6 +241,10 @@ return $argument[0] == $user->uid;',
   $handler->override_option('title', 'My Blog Posts');
   $handler->override_option('items_per_page', 20);
   $handler->override_option('use_pager', '1');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+  ));
+  $handler = $view->new_display('page', 'Posts All', 'page_1');
   $handler->override_option('style_plugin', 'table');
   $handler->override_option('style_options', array(
     'grouping' => '',
@@ -274,7 +276,6 @@ return $argument[0] == $user->uid;',
     ),
     'default' => '-1',
   ));
-  $handler = $view->new_display('page', 'Posts All', 'page_1');
   $handler->override_option('path', 'user/%/posts');
   $handler->override_option('menu', array(
     'type' => 'none',
@@ -327,6 +328,37 @@ return $argument[0] == $user->uid;',
     ),
   ));
   $handler->override_option('title', 'My Unpublished Blog Posts');
+  $handler->override_option('style_plugin', 'table');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'override' => 1,
+    'sticky' => 0,
+    'order' => 'asc',
+    'columns' => array(
+      'title' => 'title',
+      'created' => 'created',
+      'status' => 'status',
+      'edit_node' => 'edit_node',
+    ),
+    'info' => array(
+      'title' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'created' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'status' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'edit_node' => array(
+        'separator' => '',
+      ),
+    ),
+    'default' => '-1',
+  ));
   $handler->override_option('path', 'user/%/posts/unpublished');
   $handler->override_option('menu', array(
     'type' => 'none',

@@ -72,7 +72,7 @@ function sc_blogger_content_default_fields() {
       'insert_class' => '',
       'insert_width' => '',
       'label' => 'Attachment',
-      'weight' => '-3',
+      'weight' => '-2',
       'description' => '',
       'type' => 'filefield_widget',
       'module' => 'filefield',
