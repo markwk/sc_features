@@ -188,9 +188,7 @@ function sc_blogger_views_default_views() {
         'news' => 0,
         'profile' => 0,
         'panel' => 0,
-        'gallery' => 0,
         'page' => 0,
-        'photo' => 0,
       ),
       'validate_argument_node_access' => 0,
       'validate_argument_nid_type' => 'nid',
@@ -208,7 +206,7 @@ function sc_blogger_views_default_views() {
       'validate_argument_user_flag_test' => 'flaggable',
       'validate_argument_user_flag_id_type' => 'id',
       'validate_argument_php' => 'global $user;
-return $argument[0] == $user->uid;',
+return $argument[0] == $user->uid || user_access(\'administer nodes\');',
       'override' => array(
         'button' => 'Override',
       ),
