@@ -1,0 +1,3 @@
+<?php
+
+include_once('sc_gallery.features.inc');

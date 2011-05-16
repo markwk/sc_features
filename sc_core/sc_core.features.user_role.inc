@@ -21,5 +21,20 @@ function sc_core_user_default_roles() {
     'name' => 'authenticated user',
   );
 
+  // Exported role: manager
+  $roles['manager'] = array(
+    'name' => 'manager',
+  );
+
+  // Exported role: student
+  $roles['student'] = array(
+    'name' => 'student',
+  );
+
+  // Exported role: teacher
+  $roles['teacher'] = array(
+    'name' => 'teacher',
+  );
+
   return $roles;
 }

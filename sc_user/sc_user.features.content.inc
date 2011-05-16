@@ -74,7 +74,7 @@ $display = $node_field_item[\'value\'];
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Age',
-      'weight' => '1',
+      'weight' => '2',
       'description' => '',
       'type' => 'computed',
       'module' => 'computed_field',
@@ -136,7 +136,7 @@ $display = $node_field_item[\'value\'];
       ),
       'default_value_php' => NULL,
       'label' => 'Bio',
-      'weight' => '-1',
+      'weight' => 0,
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -207,7 +207,7 @@ $display = $node_field_item[\'value\'];
       'year_range' => '-100:+10',
       'label_position' => 'above',
       'label' => 'Birthday',
-      'weight' => 0,
+      'weight' => '1',
       'description' => '',
       'type' => 'date_select',
       'module' => 'date',
@@ -293,7 +293,7 @@ Other Language',
       ),
       'default_value_php' => NULL,
       'label' => 'Fluent Languages',
-      'weight' => '3',
+      'weight' => '4',
       'description' => '',
       'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
@@ -379,7 +379,7 @@ Other Language',
       ),
       'default_value_php' => NULL,
       'label' => 'Languages I am studying',
-      'weight' => '4',
+      'weight' => '5',
       'description' => '',
       'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
@@ -441,7 +441,7 @@ Other Language',
       ),
       'default_value_php' => NULL,
       'label' => 'Location',
-      'weight' => '-2',
+      'weight' => '-1',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -565,6 +565,130 @@ Other Language',
       ),
       'default_value_php' => NULL,
       'label' => 'English Name',
+      'weight' => '-2',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_name_first
+  $fields['profile-field_name_first'] = array(
+    'field_name' => 'field_name_first',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_name_first][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'First Name',
+      'weight' => '-4',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_name_last
+  $fields['profile-field_name_last'] = array(
+    'field_name' => 'field_name_last',
+    'type_name' => 'profile',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_name_last][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Last Name (Family Name)',
       'weight' => '-3',
       'description' => '',
       'type' => 'text_textfield',
@@ -799,7 +923,7 @@ Zimbabwean',
       ),
       'default_value_php' => NULL,
       'label' => 'Nationality',
-      'weight' => '2',
+      'weight' => '3',
       'description' => '',
       'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
@@ -812,9 +936,11 @@ Zimbabwean',
   t('Bio');
   t('Birthday');
   t('English Name');
+  t('First Name');
   t('Fluent Languages');
   t('Full Name');
   t('Languages I am studying');
+  t('Last Name (Family Name)');
   t('Location');
   t('Nationality');
 

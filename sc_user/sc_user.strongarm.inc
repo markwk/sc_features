@@ -74,12 +74,12 @@ function sc_user_strongarm() {
   $strongarm->name = 'content_extra_weights_profile';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '7',
-    'author' => '6',
-    'options' => '8',
-    'comment_settings' => '10',
-    'menu' => '5',
-    'path' => '9',
+    'revision_information' => '8',
+    'author' => '7',
+    'options' => '9',
+    'comment_settings' => '11',
+    'menu' => '6',
+    'path' => '10',
   );
 
   $export['content_extra_weights_profile'] = $strongarm;
@@ -169,6 +169,17 @@ function sc_user_strongarm() {
   );
 
   $export['node_options_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'openid_cp_field_map_profile';
+  $strongarm->value = array(
+    'http://axschema.org/namePerson' => 'title',
+    'http://axschema.org/namePerson/first' => 'field_name_first',
+    'http://axschema.org/namePerson/last' => 'field_name_last',
+  );
+
+  $export['openid_cp_field_map_profile'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;

@@ -19,7 +19,7 @@ function sc_people_views_default_views() {
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
     'name' => array(
-      'label' => 'Name',
+      'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -49,6 +49,21 @@ function sc_people_views_default_views() {
       'table' => 'users',
       'field' => 'name',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'name' => array(
+      'order' => 'ASC',
+      'id' => 'name',
+      'table' => 'users',
+      'field' => 'name',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
     ),
   ));
   $handler->override_option('access', array(
@@ -56,6 +71,15 @@ function sc_people_views_default_views() {
   ));
   $handler->override_option('cache', array(
     'type' => 'none',
+  ));
+  $handler->override_option('items_per_page', 40);
+  $handler->override_option('use_pager', '1');
+  $handler->override_option('style_plugin', 'grid');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'columns' => '4',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
   ));
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->override_option('path', 'people');
